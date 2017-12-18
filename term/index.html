@@ -1,0 +1,90 @@
+<!doctype html>
+
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Краевая задача для уравнения теплопроводности</title>
+	
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/load.css">
+
+
+	<!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+	<div id="main" class="container">
+		<h1>Краевая задача для уравнения теплопроводности</h1>
+		<div class="row">
+			<div id="Plot" class="col-md-6">
+			
+			</div>
+			<div class="col-md-6">
+				<div id="needs-validation" novalidate>
+					<div class="row">
+						<div class="col-md-6">
+							<label for="len">Длина:</label>
+							<input type="text" placeholder="1" value="1" class="form-control" id="len" required>
+						</div>
+						<div class="col-md-6">
+							<label for="N">Делитель длины:</label>
+							<input type="text" placeholder="10" value="10" class="form-control" id="N" required>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<label for="time">Время:</label>
+							<input type="text" placeholder="1" value="1" class="form-control" id="time" required>
+						</div>
+						<div class="col-md-6">
+							<label for="N0">Делитель времени:</label>
+							<input type="text" placeholder="200" value="200" class="form-control" id="N0" required>
+						</div>
+					</div>
+					<!--
+					<div class="row">
+						<div class="col-md-6">
+							<label for="lUr">Уравнение теплопроводности левого узла:</label>
+							<input type="text" placeholder="n * t ^ 2 - 2 * n * T * t" class="form-control" id="lUr" required>
+						</div>
+						<div class="col-md-6">
+							<label for="rUr">Уравнение теплопроводности правого узла:</label>
+							<input type="text" placeholder="n / 2 * t ^ 2 - n * T * t" class="form-control" id="rUr" required>
+						</div>
+					</div>
+					-->
+					<div class="row-md-12">
+						<label for="n">Номер варианта:</label>
+						<input type="text" placeholder="6" value="6" class="form-control" id="n" required>
+					</div>
+					<button class="btn btn-success form-control" onclick="calculate()">Произвести расчёт!</button>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+	<div id="loading">
+		<div id="inner">
+			<div class="cssload-thecube">
+				<div class="cssload-cube cssload-c1"></div>
+				<div class="cssload-cube cssload-c2"></div>
+				<div class="cssload-cube cssload-c4"></div>
+				<div class="cssload-cube cssload-c3"></div>
+			</div>
+		</div>
+	</div>
+		
+
+	<script src="libs/jquery-3.2.1.min.js"></script>
+	<script src="libs/bootstrap/js/bootstrap.min.js"></script>
+	<script src="libs/math.min.js"></script>
+	<script src="app/main.js"></script>
+	<script src="libs/plotly-latest.min.js"></script>
+</body>
+</html>

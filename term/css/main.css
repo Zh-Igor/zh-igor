@@ -1,0 +1,52 @@
+body {
+	background-image: url(../images/paper.jpg);
+	background-repeat: repeat-x repeat-y;
+	background-position: left;
+	background-attachment: fixed;
+}
+
+#main {
+	background-color: rgba(33, 33, 33, 0.75);
+	text-align: center;
+	padding: 15px;
+	z-index: 100;
+}
+
+#main h1 {
+	color: white;
+}
+
+#main a {
+	color: white;
+}
+
+#main lable {
+	color: white;
+}
+
+#loading {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: inline-block;
+	z-index: 999999;
+	background-color: rgba(33, 33, 33, 0.80);
+	visibility: hidden;
+}
+
+#inner {
+  	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+div.container table {
+	width: 100%;
+}
+
+div.container form {
+	text-align: left;
+}
